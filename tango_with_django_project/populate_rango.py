@@ -31,6 +31,9 @@ def populate():
         {'title':'Flask',
          'url':'http://flask.pocoo.org'} ]
 
+    # cats = {'Python': {'pages': python_pages},
+    #         'Django': {'pages': django_pages},
+    #         'Other Frameworks': {'pages': other_pages} }
     cats = {
         'Python': {
             'pages': python_pages,
@@ -55,6 +58,10 @@ def populate():
     # add them to the dictionaries above.
     # The code below goes through the cats dictionary, then adds each category,
     # and then adds all the associated pages for that category.
+    # for cat, cat_data in cats.items():
+    #     c = add_cat(cat)
+    #     for p in cat_data['pages']:
+    #         add_page(c, p['title'], p['url'])
     for cat, cat_data in cats.items():
         c = add_cat(cat, views=cat_data['views'], likes=cat_data['likes'])
         for p in cat_data['pages']:
