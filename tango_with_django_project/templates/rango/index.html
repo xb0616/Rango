@@ -12,6 +12,8 @@
             <strong>{{ boldmessage }}</strong><br />
         </div>
 
+        <a href="{% url 'rango:register' %}">Register Here</a><br />
+        
         <div>
             <h2>Most Liked Categories</h2>
         </div>
@@ -29,7 +31,7 @@
             {% else %}
                 <strong>There are no pages present.</strong>
             {% endif %}
-            
+
         <a href="{% url 'rango:add_category' %}">Add a New Category</a><br />
 
         </div>
